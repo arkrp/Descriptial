@@ -14,3 +14,4 @@ cin>>add.x>> add.y;
     return 0;
 }
 //need to implement the allowance of any data type example 2x + x 
+//or have value as string by defeault then have the ability to add either as a string (2x + x = 3x) or as double or int(x = 3, so x + 6 = 9)
