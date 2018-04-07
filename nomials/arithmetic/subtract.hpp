@@ -1,6 +1,6 @@
 #ifndef SUB
 #define SUB
-#include "nomial.hpp"
+#include "..\..\nomial.hpp"
 template<class T>
 class suber : public nomial<T>
 {

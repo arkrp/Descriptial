@@ -1,6 +1,6 @@
 #ifndef CONSTANT
 #define CONSTANT
-#include "nomial.hpp"
+#include "..\..\nomial.hpp"
 template<class T>
 class constant : public nomial<T>
 {

@@ -1,6 +1,6 @@
 #ifndef IDENTITY
 #define IDENTITY
-#include "nomial.hpp"
+#include "..\..\nomial.hpp"
 template<class T>
 class identity : public nomial<T>
 {

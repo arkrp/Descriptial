@@ -1,6 +1,6 @@
 #ifndef ADD
 #define ADD
-#include "nomial.hpp"
+#include "..\..\nomial.hpp"
 template<class T>
 class adder : public nomial<T>
 {

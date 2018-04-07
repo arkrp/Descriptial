@@ -1,6 +1,6 @@
 #ifndef MULTIPLY
 #define MULTIPLY
-#include "nomial.hpp"
+#include "..\..\nomial.hpp"
 template<class T>
 class multiplier : public nomial<T>
 {

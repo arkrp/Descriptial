@@ -8,25 +8,28 @@
 
 #include <iostream>
 #include "nomial.hpp"
-#include "constant.hpp"
-#include "identity.hpp"
-#include "adder.hpp"
-#include "suber.hpp"
+#include "nomials\fundemental\fundemental.hpp"
+#include "nomials\arithmetic\arithmetic.hpp"
+#include "nomials\trigenometry\trigenometry.hpp"
 using namespace std;
+
+void testnomial(nomial<double> * func);
 
 int main() {
 
-	nomial<double> * func1;
-	//1+x
-	func1 = new adder<double>(new constant<double>(1),new identity<double>());
-	cout << func1->eval(1) << endl;
-	cout << func1->eval(2) << endl;
+	//testfunction
+	//func1 = sin(x)+x
+	nomial<double> * func1 = new adder<double>(new sine<double>(new identity<double>()),new identity<double>());
+	testnomial(func1);
 
-	nomial<double> * func2;
-	//1-x
-	func2 = new suber<double>(new constant<double>(1),new identity<double>());
-	cout << func2->eval(1) << endl;
-	cout << func2->eval(2) << endl;
 
 	return 0;
+}
+
+void testnomial(nomial<double> * func)
+{
+	cout << "1: " << func->eval(1) << endl;
+	cout << "2: " << func->eval(2) << endl;
+	cout << "3: " << func->eval(3) << endl;
+	cout << "4: " << func->eval(4) << endl;
 }
