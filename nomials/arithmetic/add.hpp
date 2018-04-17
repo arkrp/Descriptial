@@ -16,16 +16,16 @@ public:
 	{
 		return(nom1.eval(thing)+nom2.eval(thing));
 	}
-	//virtual nomial<T> & copy()
-	//{
-	//	return(*new adder(nom1,nom2));
-	//};
+	virtual adder * clone() const
+	{
+		return(new adder(*nom1.clone(),*nom2.clone()));
+	}
 };
 
 //overloading
-template<class T> adder<T> operator+(const nomial<T> & a,const nomial<T> & b)
+template<class T> adder<T> & operator+(const nomial<T> & a,const nomial<T> & b)
 {
-	return(a);
+	return(*new adder<T>( *(a.clone()) , *(b.clone()) ));
 }
 
 #endif

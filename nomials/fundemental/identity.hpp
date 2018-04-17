@@ -9,5 +9,9 @@ public:
 	{
 		return(thing);
 	}
+	virtual identity * clone() const
+	{
+		return(new identity());
+	}
 };
 #endif

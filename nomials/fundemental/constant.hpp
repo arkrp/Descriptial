@@ -14,5 +14,9 @@ public:
 	{
 		return(value);
 	}
+	virtual constant * clone() const
+	{
+		return(new constant(value));
+	}
 };
 #endif
