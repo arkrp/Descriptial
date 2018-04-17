@@ -19,7 +19,10 @@ int main() {
 
 	//testfunction
 	//func1 = sin(x)+x
-	nomial<double> * func1 = new adder<double>(new sine<double>(new identity<double>()),new identity<double>());
+	nomial<double> * func1 = new adder<double>(*new sine<double>(*new identity<double>()),*new identity<double>());
+	//nomial<double> * func1 = &(*new sine<double>(*new identity<double>())+*new identity<double>());
+	//nomial<double> * func1 = new constant<double>(2);
+	//nomial<double> * func1 = &(*new identity<double>() + *new identity<double>());
 	testnomial(func1);
 
 
