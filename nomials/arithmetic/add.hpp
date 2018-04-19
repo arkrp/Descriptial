@@ -20,6 +20,10 @@ public:
 	{
 		return(new adder(*nom1.clone(),*nom2.clone()));
 	}
+	virtual string tostring()
+	{
+		return("(" + nom1.tostring() + " + " + nom2.tostring() + ")")
+	}
 };
 
 //overloading

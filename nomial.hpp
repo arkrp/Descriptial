@@ -17,5 +17,6 @@ public:
 		//this is holder class not meant to be used directly
 		return(asdf);
 	}
+	virtual string tostring();
 };
 #endif
