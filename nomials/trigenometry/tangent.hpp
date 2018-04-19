@@ -18,5 +18,9 @@ public:
 	{
 		return(tan(nom1.eval(thing)));//*nom2->eval(thing));
 	}
+	virtual tangent * clone() const
+	{
+		return(new tangent(*nom1.clone()));
+	}
 };
 #endif

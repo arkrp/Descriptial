@@ -18,5 +18,9 @@ public:
 	{
 		return(cos(nom1.eval(thing)));//*nom2->eval(thing));
 	}
+	virtual cosine * clone() const
+	{
+		return(new cosine(*nom1.clone()));
+	}
 };
 #endif

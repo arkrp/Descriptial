@@ -16,5 +16,13 @@ public:
 	{
 		return(nom1.eval(thing)-nom2.eval(thing));
 	}
+	virtual suber * clone() const
+	{
+		return(new suber(*nom1.clone(),*nom2.clone()));
+	}
 };
+template<class T> suber<T> & operator-(const nomial<T> & a,const nomial<T> & b)
+{
+	return(*new suber<T>( *(a.clone()) , *(b.clone()) ));
+}
 #endif

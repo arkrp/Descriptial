@@ -16,5 +16,13 @@ public:
 	{
 		return(nom1.eval(thing)*nom2.eval(thing));
 	}
+	virtual multiplier * clone() const
+	{
+		return(new multiplier(*nom1.clone(),*nom2.clone()));
+	}
 };
+template<class T> multiplier<T> & operator*(const nomial<T> & a,const nomial<T> & b)
+{
+	return(*new multiplier<T>( *(a.clone()) , *(b.clone()) ));
+}
 #endif

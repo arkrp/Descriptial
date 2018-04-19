@@ -19,5 +19,9 @@ public:
 
 		return(sin(nom1.eval(thing)));//*nom2->eval(thing));
 	}
+	virtual sine * clone() const
+	{
+		return(new sine(*nom1.clone()));
+	}
 };
 #endif
