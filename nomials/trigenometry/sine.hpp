@@ -23,5 +23,9 @@ public:
 	{
 		return(new sine(*nom1.clone()));
 	}
+	virtual string tostring()
+	{
+	return("Sin(" + nom1.tostring() + ")");
+	}
 };
 #endif
