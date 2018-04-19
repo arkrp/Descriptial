@@ -5,13 +5,17 @@ template<class T>
 class identity : public nomial<T>
 {
 public:
-	virtual T eval(T thing)
-	{
-		return(thing);
-	}
-	virtual identity * clone() const
-	{
-		return(new identity());
-	}
+    virtual T eval(T thing)
+    {
+        return(thing);
+    }
+    virtual identity * clone() const
+    {
+        return(new identity());
+    }
+    virtual string tostring() const
+    {
+        return("x");
+    }
 };
 #endif
