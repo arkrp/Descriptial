@@ -20,6 +20,10 @@ public:
 	{
 		return(new multiplier(*nom1.clone(),*nom2.clone()));
 	}
+	virtual string tostring()
+	{
+		return("(" + nom1.tostring() + " * " + nom2.tostring() + ")")
+	}
 };
 template<class T> multiplier<T> & operator*(const nomial<T> & a,const nomial<T> & b)
 {

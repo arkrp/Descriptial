@@ -20,6 +20,10 @@ public:
 	{
 		return(new suber(*nom1.clone(),*nom2.clone()));
 	}
+	virtual string tostring()
+	{
+		return("(" + nom1.tostring() + " - " + nom2.tostring() + ")")
+	}
 };
 template<class T> suber<T> & operator-(const nomial<T> & a,const nomial<T> & b)
 {
