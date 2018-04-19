@@ -1,6 +1,7 @@
 #ifndef CONSTANT
 #define CONSTANT
 #include "..\..\nomial.hpp"
+#include <string>
 template<class T>
 class constant : public nomial<T>
 {
@@ -20,7 +21,7 @@ public:
     }
     virtual string tostring() const
     {
-        return(value + "");
+        return(to_string(value));
     }
 };
 #endif
