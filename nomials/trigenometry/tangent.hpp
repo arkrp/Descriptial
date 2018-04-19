@@ -22,5 +22,9 @@ public:
 	{
 		return(new tangent(*nom1.clone()));
 	}
+	virtual string tostring()
+	{
+	return("Tan(" + nom1.tostring() + ")");
+	}
 };
 #endif
