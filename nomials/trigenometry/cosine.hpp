@@ -22,5 +22,9 @@ public:
 	{
 		return(new cosine(*nom1.clone()));
 	}
+	virtual string tostring()
+	{
+	return("Cos(" + nom1.tostring() + ")");
+	}
 };
 #endif
