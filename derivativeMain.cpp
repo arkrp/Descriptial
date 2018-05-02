@@ -43,8 +43,6 @@ double derivative(nomial<double> *obj, double x, int prec){
     double derivtrial = 0.0;
     double prevtrial = 0.0;
     
-    prec += 0;
-    
     derivtrial = (obj->eval(x + h) - obj->eval(x))/(h);
     prevtrial = derivtrial;
     h = h/10;
